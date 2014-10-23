@@ -1,12 +1,15 @@
-Template.chart2.rendered = function() {
-	Meteor.setTimeout(initializeChart, 0)
+Template.chart.rendered = function() {
+    var tpl = this
+    Meteor.setTimeout( function() {
+        initializeChart(tpl)
+    }, 0)
 }
 
-var initializeChart = function() {
+var initializeChart = function(tpl) {
 
     var dataSeries = [9,8,7,6,5,4,3,2,1,0]
 
-    $('#chart2').highcharts({
+    tpl.$('#chart2').highcharts({
         chart: {
             type: 'column'
         },
