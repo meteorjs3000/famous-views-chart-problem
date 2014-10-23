@@ -8,7 +8,7 @@ Router.map( function() {
 
 	this.route('index', {
 		path: '/',
-		template: 'main'
+		template: 'chart'
 	})
 
 	this.route('chart', {
